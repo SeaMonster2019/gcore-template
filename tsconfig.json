@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "target": "ES2017",
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "outDir": "./dist",
+        "rootDir": "./source",
+        "types": [
+            "@cocos/creator-types/engine",
+            "@cocos/creator-types/editor"
+        ]
+    },
+    "include": [
+        "source/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "../node_modules"
+    ]
+}

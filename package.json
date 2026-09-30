@@ -1,0 +1,157 @@
+{
+    "$schema": "./@types/schema/package/index.json",
+    "package_version": 2,
+    "name": "gcore-framework",
+    "version": "1.0.0",
+    "author": "SeaMonster1919",
+    "editor": ">=3.8.7",
+    "scripts": {
+        "preinstall": "node ./scripts/preinstall.js",
+        "build": "npx tsc",
+        "build:idx": "npx barrelsby --directory ./assets/scripts --mode top --delete"
+    },
+    "description": "i18n:gcore-framework.description",
+    "main": "./dist/main.js",
+    "exports": {
+        "./base/container": {
+            "types": "./assets/scripts/base/container/index.ts",
+            "default": "./assets/scripts/base/container/index.ts"
+        },
+        "./base/math": {
+            "types": "./assets/scripts/base/math/index.ts",
+            "default": "./assets/scripts/base/math/index.ts"
+        },
+        "./system/event": {
+            "types": "./assets/scripts/system/event/index.ts",
+            "default": "./assets/scripts/system/event/index.ts"
+        },
+        "./system/storage": {
+            "types": "./assets/scripts/system/storage/index.ts",
+            "default": "./assets/scripts/system/storage/index.ts"
+        },
+        "./system/fsm": {
+            "types": "./assets/scripts/system/fsm/index.ts",
+            "default": "./assets/scripts/system/fsm/index.ts"
+        },
+        "./system/debug": {
+            "types": "./assets/scripts/system/debug/index.ts",
+            "default": "./assets/scripts/system/debug/index.ts"
+        },
+        "./integration/res": {
+            "types": "./assets/scripts/integration/res/index.ts",
+            "default": "./assets/scripts/integration/res/index.ts"
+        },
+        "./integration/mvc": {
+            "types": "./assets/scripts/integration/mvc/index.ts",
+            "default": "./assets/scripts/integration/mvc/index.ts"
+        },
+        "./integration/ui": {
+            "types": "./assets/scripts/integration/ui/index.ts",
+            "default": "./assets/scripts/integration/ui/index.ts"
+        },
+        "./integration/i18n": {
+            "types": "./assets/scripts/integration/i18n/index.ts",
+            "default": "./assets/scripts/integration/i18n/index.ts"
+        },
+        "./integration/audio": {
+            "types": "./assets/scripts/integration/audio/index.ts",
+            "default": "./assets/scripts/integration/audio/index.ts"
+        },
+        "./integration/core-init": {
+            "types": "./assets/scripts/integration/core-init.ts",
+            "default": "./assets/scripts/integration/core-init.ts"
+        }
+    },
+    "dependencies": {
+        "@msgpack/msgpack": "^3.1.3",
+        "fonteditor-core": "^2.6.3",
+        "long": "^5.3.2",
+        "opentype.js": "^2.0.0",
+        "papaparse": "^5.4.1",
+        "vue": "^3.1.4",
+        "xlsx": "^0.18.5"
+    },
+    "devDependencies": {
+        "@cocos/creator-types": "^3.8.7",
+        "@types/node": "^18.17.1",
+        "@types/opentype.js": "^1.3.10",
+        "ctix": "^2.8.0",
+        "typescript": "^5.8.2"
+    },
+    "panels": {
+        "default": {
+            "title": "gcore框架工具",
+            "type": "dockable",
+            "main": "dist/panels/default",
+            "size": {
+                "min-width": 400,
+                "min-height": 300,
+                "width": 1024,
+                "height": 600
+            }
+        }
+    },
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:gcore-framework.menu_title",
+                "label": "i18n:gcore-framework.open_panel",
+                "message": "open-panel"
+            }
+        ],
+        "messages": {
+            "open-panel": {
+                "methods": [
+                    "openPanel"
+                ]
+            },
+            "query-i18n-text": {
+                "methods": [
+                    "queryI18nText"
+                ]
+            },
+            "query-i18n-all": {
+                "methods": [
+                    "queryI18nAll"
+                ]
+            },
+            "on-font-replace-result": {
+                "methods": [
+                    "onFontReplaceResult"
+                ]
+            },
+            "on-current-asset-uuid": {
+                "methods": [
+                    "onCurrentAssetUuid"
+                ]
+            },
+            "check-font-missing": {
+                "methods": [
+                    "checkFontMissing"
+                ]
+            },
+            "subset-font": {
+                "methods": [
+                    "subsetFont"
+                ]
+            },
+            "convert-font": {
+                "methods": [
+                    "convertFont"
+                ]
+            }
+        },
+        "asset-db": {
+            "mount": {
+                "path": "./assets",
+                "readonly": false
+            }
+        },
+        "scene": {
+            "script": "./dist/scene-script.js"
+        }
+    },
+    "files": [
+        "assets/scripts"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "es6",
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "inlineSources": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "rootDir": "./",
+        "paths": {
+            "@msgpack/*": [
+                "../../node_modules/@msgpack/*"
+            ]
+        },
+        "types": [
+            "../../../temp/declarations/cc.custom-macro",
+            "../../../temp/declarations/cc",
+            "../../../temp/declarations/jsb",
+            "../../../temp/declarations/cc.env",
+        ],
+    },
+    "exclude": [
+        "node_modules",
+        "../node_modules"
+    ]
+}
