@@ -1,0 +1,12 @@
+{
+  "name": "gcore-template",
+  "uuid": "5b360db5-e625-4596-ba4f-01c904d15ee3",
+  "creator": {
+    "version": "3.8.7"
+  },
+  "scripts": {
+    "init:core": "git remote add gcore-framework https://github.com/SeaMonster2019/gcore-framework.git && git subtree add --prefix=extensions/gcore-framework gcore-framework main --squash",
+    "pull:core": "git subtree pull --prefix=extensions/gcore-framework gcore-framework main --squash",
+    "push:core": "git subtree push --prefix=extensions/gcore-framework gcore-framework main"
+  }
+}
