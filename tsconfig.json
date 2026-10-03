@@ -4,6 +4,21 @@
 
   /* Add your custom configuration here. */
   "compilerOptions": {
-    "strict": false
-  }
+    "strict": false,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "paths": {
+      "db://gcore-framework/*": [
+        "./extensions/gcore-framework/assets/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    ".vscode",
+    "./temp",
+    "extensions"
+  ]
 }
