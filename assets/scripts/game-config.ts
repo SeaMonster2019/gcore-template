@@ -30,6 +30,6 @@ export const GameInitConfig = {
 
 /** 调试配置 */
 export const DebugConfig = {
-    /** 是否跳过主菜单直接开始 */
-    skipMainMenu: false,
+    /** 是否跳过主菜单直接开始（调试期直接进入游戏主界面） */
+    skipMainMenu: true,
 };
